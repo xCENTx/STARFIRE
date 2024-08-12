@@ -6,11 +6,11 @@ int main()
 {
 	//	Initialize Console Window
 	///	print to console with printf or use Console class functions with the g_Console pointer
-	g_Console = std::make_unique<Console>("Dx11 External Base", true);
+	g_Console = std::make_unique<Console>("STARFIRE", true);
 
 	//	Initialize Memory Class
 	///	default attaches to notepad.exe. 
-	g_Memory = std::make_unique<Memory>(L"notepad.exe");
+	g_Memory = std::make_unique<Memory>(L"BrgGame-Steam.exe");
 	
 	//	Initialize DxWindow
 	///	creates a directx window that spans the entire client screen
