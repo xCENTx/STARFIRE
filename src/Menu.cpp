@@ -121,7 +121,7 @@ void Menu::HUD()
     ImDrawList* ImDraw = ImGui::GetWindowDrawList();
     auto center = ImVec2({ draw_size.x * .5f, draw_size.y * .5f });
     auto top_center = ImVec2({ draw_size.x * .5f, draw_size.y * 0.0f });
-    GUI::DrawTextCentered(top_center + draw_pos, IM_COL32_RED, "https://github.com/NightFyre/DX11-ImGui-External-Base", 12.f);
+    GUI::DrawTextCentered(top_center + draw_pos, IM_COL32_RED, "STARFIRE - https://github.com/KleanOni/STARFIRE", 12.f);
 
     ImGui::End();
 }
