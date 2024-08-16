@@ -1,6 +1,7 @@
 #ifndef PCH_H
 #define PCH_H
 #define WIN32_LEAN_AND_MEAN             // Exclude rarely-used stuff from Windows headers
+#define _USE_MATH_DEFINES
 
 // STANDARD LIBRARIES
 #include <Windows.h>
@@ -14,6 +15,7 @@
 #include <chrono>
 #include <dwmapi.h>
 #include <functional>
+#include <cmath>
 
 
 // DIRECTX
@@ -30,6 +32,7 @@
 #include "../libs/ImGui/imgui_internal.h"
 #include "../libs/ImGui/imgui_Impl_dx11.h"
 #include "../libs/ImGui/imgui_Impl_Win32.h"
+#include "../libs/Game/LID_Functions.h"
 
 using namespace std::chrono_literals;
 

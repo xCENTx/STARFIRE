@@ -11,7 +11,7 @@ int main()
 	//	Initialize Memory Class
 	///	default attaches to notepad.exe. 
 	g_Memory = std::make_unique<Memory>(L"BrgGame-Steam.exe");
-	
+
 	//	Initialize DxWindow
 	///	creates a directx window that spans the entire client screen
 	///	additionally if the process was resolved in the previous step, a clone of the main window will have been created. Controls are available to target another window.
@@ -40,6 +40,9 @@ int main()
 
 		g_dxWindow->CloneUpdate(g_Memory->GetHWND());
 		g_dxWindow->Update(g_Menu->GetOverlay());
+
+		//	Update Game Screen Size
+		LID::szScreen = LID::FVector2D(g_dxWindow->GetCloneWindowSize().x, g_dxWindow->GetCloneWindowSize().y);
 
 		std::this_thread::sleep_for(1ms);
 		std::this_thread::yield();
