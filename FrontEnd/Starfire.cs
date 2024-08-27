@@ -59,6 +59,7 @@ namespace STARFIRE.FrontEnd
             this.TopMost = true;
             this.WindowState = FormWindowState.Normal;
             Starfire_Status.Text = "STATUS: N/A";
+            SubscribeToKeyPressesForHotkeys();
 
             // Call CheckFormPosition in the form's constructor
             CheckFormPosition();
@@ -67,7 +68,6 @@ namespace STARFIRE.FrontEnd
         #endregion
 
         #region Hotkeys
-
         private void GlobalHookKeyDown()
         {
 
@@ -85,17 +85,16 @@ namespace STARFIRE.FrontEnd
             {
                 Escalator_3_Button_Click(this, EventArgs.Empty);
             }
-
             if (HotKeys.IsKeyPressed(Keys.NumPad4))
             {
                 Resource1_Teleport_Click(this, EventArgs.Empty);
             }
-
+            
             if (HotKeys.IsKeyPressed(Keys.NumPad5))
             {
                 Resource2_Teleport_Click(this, EventArgs.Empty);
             }
-
+            
             if (HotKeys.IsKeyPressed(Keys.NumPad6))
             {
                 Resource3_Teleport_Click(this, EventArgs.Empty);
@@ -2209,5 +2208,9 @@ namespace STARFIRE.FrontEnd
         }
         #endregion
 
+        private void Starfire_Header_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
